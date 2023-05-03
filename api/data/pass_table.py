@@ -1,6 +1,7 @@
 import datetime
 import sqlalchemy
 from .db_session import SqlAlchemyBase
+
 #a
 
 class SingUp(SqlAlchemyBase):
@@ -13,3 +14,6 @@ class SingUp(SqlAlchemyBase):
                               index=True, unique=True, nullable=True)
     password = sqlalchemy.Column(sqlalchemy.String, nullable=True)
     old = sqlalchemy.Column(sqlalchemy.Integer, nullable=True)
+
+    def __repr__(self):
+        return f'{self.name}'
