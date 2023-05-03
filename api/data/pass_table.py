@@ -2,7 +2,6 @@ import datetime
 import sqlalchemy
 from .db_session import SqlAlchemyBase
 
-#a
 
 class SingUp(SqlAlchemyBase):
     __tablename__ = 'passwords'
