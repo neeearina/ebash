@@ -7,7 +7,7 @@ class Category(SqlAlchemyBase):
 
     id_c = sqlalchemy.Column(sqlalchemy.Integer,
                              primary_key=True, autoincrement=True)
-    name_c = sqlalchemy.Column(sqlalchemy.String, nullable=True)
+    name_c = sqlalchemy.Column(sqlalchemy.Text, nullable=True)
 
     def __repr__(self):
         return f'{self.name_c}'

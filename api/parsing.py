@@ -10,13 +10,16 @@ from data.category_table import Category
 
 
 def append_to_db(name):
-    print(name)
-    print(type(name))
-    db_sess = db_session.create_session()  # подключаемся к бд
-    obj = Category()
-    obj.name_c = name
-    db_sess.add(obj)
-    db_sess.commit()
+    try:
+        print(name)
+        print(type(name))
+        db_sess = db_session.create_session()  # подключаемся к бд
+        obj = Category()
+        obj.name_c = name
+        db_sess.add(obj)
+        db_sess.commit()
+    except Exception as e:
+        print(e)
 
 
 def selenium_find():
@@ -33,11 +36,8 @@ def selenium_find():
             append_to_db(name)
         time.sleep(3)
         browser.quit()
-        return
     except Exception as e:
         print(e)
         browser.quit()
         return None
 
-
-selenium_find()

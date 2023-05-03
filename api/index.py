@@ -1,6 +1,6 @@
 from data import db_session
 from flask import Flask
-#a
+from parsing import selenium_find
 app = Flask(__name__)
 
 
@@ -12,6 +12,7 @@ def mission():
 def main():
     db_session.global_init("db/main_db.db")
     app.run()
+    # selenium_find()
 
 
 if __name__ == '__main__':
