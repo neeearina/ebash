@@ -13,3 +13,5 @@ class Proff(SqlAlchemyBase):
     zarplata = sqlalchemy.Column(sqlalchemy.Integer, nullable=True)
     description = sqlalchemy.Column(sqlalchemy.Text, nullable=True)
 
+    def __repr__(self):
+        return f'{self.name}/{self.zarplata}/{self.description}'

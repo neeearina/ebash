@@ -3,11 +3,11 @@ from selenium.webdriver import Keys
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 import time
-import urllib.request
-
 from data import __all_models, db_session
 from data.category_table import Category
 from data.prof_in_cat import Proff
+import requests
+import json
 
 
 def append_to_db_category(name):
